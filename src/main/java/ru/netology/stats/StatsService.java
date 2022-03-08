@@ -43,7 +43,7 @@ public class StatsService {
     }
 
     public int countMonthUnderAv(int[] sales) {
-        double avg = 15;
+        double avg = calcAverage(sales);
         int count = 0;
         for (int sale : sales) {
             if (sale < avg) {
@@ -54,7 +54,7 @@ public class StatsService {
     }
 
     public int countMonthOverAv(int[] sales) {
-        double avg = 15;
+        double avg = calcAverage(sales);
         int count = 0;
         for (int sale : sales) {
             if (sale > avg) {
